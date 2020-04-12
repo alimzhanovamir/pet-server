@@ -5,7 +5,7 @@
   "repository": "https://github.com/alimzhanovamir/pet-server.git",
   "author": "Alimzhanov Amir <alimzhanovamir@mail.ru>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.17.1",
     "cors": "^2.8.5"
   },

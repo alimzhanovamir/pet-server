@@ -8,6 +8,7 @@ const cors = require('cors');
 const PORT = process.env.PORT || 80;
 const whitelist = [
   'https://alimzhanovamir.github.io',
+  'https://alimzhanovamir.github.io/egamings-test-react/',
   'http://localhost:3000'
 ];
 
@@ -19,7 +20,7 @@ const corsOptionsDelegate = function (req, callback) {
     corsOptions = { origin: false } // disable CORS for this request
   }
   callback(null, corsOptions) // callback expects two parameters: error and options
-}
+};
 
 
 app.get('/', function (req, res) {

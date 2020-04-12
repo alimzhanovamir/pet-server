@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const gamesJSON = fs.readFileSync('./json/games.json');
+const gamesJSON = JSON.parse(fs.readFileSync('./json/games.json'));
 const cors = require('cors');
 // app.use(cors());
 
@@ -46,7 +46,7 @@ app.get('/about', function (req, res) {
   `);
 });
 
-app.get('/games', cors(corsOptionsDelegate),function (req, res) {
+app.get('/games', cors(corsOptionsDelegate), function (req, res) {
   res.json(gamesJSON);
 });
 
